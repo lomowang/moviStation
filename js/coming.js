@@ -1,6 +1,6 @@
 let data;
 
-// 每天熱門電影
+// 即將到來
 
 const API_KEY = 'api_key=5d7ac24e63419994fda11db9f90c8f2b';
 const BASE_URL ='https://api.themoviedb.org/3';
@@ -11,7 +11,7 @@ const main = document.getElementById('main');
 
 
 
-// 抓出一周熱門電影
+// 抓出電影
 getMovies(API_URL);
 function getMovies(url){
     fetch(url).then(res => res.json()).then(data =>{
@@ -23,7 +23,7 @@ function getMovies(url){
 
 
 
-// 秀出一周熱門電影
+// 秀出電影
 function showMovie(data){
     main.innerHTML='';
     data.forEach(movie => {
