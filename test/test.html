@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <ul class="navidation">
+                <li class="navidation-tab"><a href="index.html">首頁</a></li>
+                <li class="navidation-tab"><a href="Popularity.html">熱門電影</a></li>
+                <li class="navidation-tab"><a href="">我的片單</a></li>
+                <li class="navidation-tab"><a href="coming.html">即將上映</a></li>
+            </ul>
+        </div>
+        <form id="form">
+            <input type="text" placeholder="search" id="search" class="search">
+        </form>
+    </header>
+    
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+            <!-- Overlay content -->
+            <div class="overlay-content" id="overlay-content"></div> 
+        </div>
+
+
+    <main id="main">
+        <div class="movie">
+            <img src="https://picsum.photos/id/684/600/400" alt="image">
+            <div class="movieInfo">
+                <h3>movieTitle</h3>
+                <span class="green">評分</span>
+            </div>
+            
+            <div class="date">
+                <p >發布日期</p>
+            </div>
+
+            <div class="overView">
+                <h3>overview</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima sapiente nisi aut quo modi recusandae! Fugiat ducimus sunt facilis quis, eius magnam a iure tempora molestiae dolor, ullam ex et!
+            </div>
+        </div>
+
+        
+        <div class="movie">
+            <img src="https://picsum.photos/id/684/600/400" alt="image">
+
+            
+
+
+            <div class="movieInfo">
+                <h3>movieTitle</h3>
+                <span class="green">評分</span>
+            </div>
+
+            <div class="date">
+                <p >發布日期</p>
+            </div>
+
+            <div class="overView">
+                <h3>overview</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima sapiente nisi aut quo modi recusandae! Fugiat ducimus sunt facilis quis, eius magnam a iure tempora molestiae dolor, ullam ex et!
+            </div>
+        </div>
+
+        
+        <div class="movie">
+            <img src="https://picsum.photos/id/684/600/400" alt="image">
+            <div class="movieInfo">
+                <h3>movieTitle</h3>
+                <span class="green">評分</span>
+            </div>
+
+            <div class="date">
+                <p >發布日期</p>
+            </div>
+
+            <div class="overView">
+                <h3>overview</h3>
+                <!-- 電影內文 -->
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima sapiente nisi aut quo modi recusandae! Fugiat ducimus sunt facilis quis, eius magnam a iure tempora molestiae dolor, ullam ex et!
+
+                <button class="know_more">Know More</button>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="test.js"></script>
+</body>
+</html>
