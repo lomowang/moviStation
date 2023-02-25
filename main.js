@@ -205,6 +205,8 @@ function showMovies(data){
         const movieEL = document.createElement('div');
         movieEL.classList.add('movie');
         movieEL.innerHTML=`
+
+        <button id="myFavorite" >加到我的片單</button>
         <img src="${IMG_URL+poster_path}" alt="${title}">
             <div class="movieInfo">
                 <h3>${title}</h3>
@@ -232,6 +234,11 @@ function showMovies(data){
         
     }
     
+  
+
+
+
+
     
     const overlayContent = document.getElementById('overlay-content');
     /* Open when someone clicks on the span element */
@@ -284,10 +291,6 @@ function showMovies(data){
         })
       }
 
-
-
-
-      
       /* Close when someone clicks on the "x" symbol inside the overlay */
       function closeNav() {
         document.getElementById("myNav").style.width = "0%";
@@ -383,3 +386,4 @@ function showMovies(data){
 
 
 
+  
