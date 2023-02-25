@@ -4,24 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Filmalane</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <div class="logo">
+    <header class="header" data-header>
+        <div class="container">
+            <div class="overlay" data-overlay></div>
+                 <a href="./index.html" class="logo">
+                      <img src="./assets/images/logo.svg" alt="Filmlane logo">
+            </a>
+            
+        <div class="header-actions">
             <ul class="navidation">
                 <li class="navidation-tab"><a href="index.html">首頁</a></li>
                 <li class="navidation-tab"><a href="Popularity.html">熱門電影</a></li>
                 <li class="navidation-tab"><a href="">我的片單</a></li>
                 <li class="navidation-tab"><a href="coming.html">即將上映</a></li>
             </ul>
+
+
+        <!-- 選取語言 -->
+            <div class="lang-wrapper">
+                <label for="language">
+                    <ion-icon name="globe-outline"></ion-icon>
+                  </label>
+
+                <select name="language" id="language">
+                    <option value="en">EN</option>
+                    <option value="au">AU</option>
+                    <option value="ar">AR</option>
+                    <option value="tu">TU</option>
+                </select>
+                <!-- 搜尋列 -->
+                <form id="form">
+                    <input type="text" placeholder="search" id="search" class="search">
+                </form>
+            </div>
+            <button class="btn btn-primar">Sing in</button>
+
         </div>
-        <form id="form">
-            <input type="text" placeholder="search" id="search" class="search">
-        </form>
+
+
+
+        <!-- 底下 -->
+        <nav class="navbar active" data-navbar>
+            <div class="navbat-top">
+                <a href="#" class="logo">
+                    <img src="" alt="logo" srcset="">
+                </a>
+
+
+            <button class="menu-close-btn" data-menu-close-btn>
+                <!-- 打叉有問題 -->
+                 <i class="ion-close"></i>
+                </button>
+            </div>
+
+
+            <ul class="navbar-list">
+                <li><a href="#" class="navbar-link">首頁</a></li>
+            </ul>
+            <ul class="navbar-list">
+                <li><a href="#" class="navbar-link">熱門電影</a></li>
+            </ul>
+            <ul class="navbar-list">
+                <li><a href="#" class="navbar-link">我的片單</a></li>
+            </ul>
+            <ul class="navbar-list">
+                <li><a href="#" class="navbar-link">即將上映</a></li>
+            </ul>
+
+            <!-- 社群連結 -->
+            <ul class="navbar-social-list">
+
+                <li>
+                    <a href="#" class="navbar-social-list"></a>
+                         <ion-icon name="logo-twitter"></ion-icon>>
+                </li>
+                <li>
+                    <a href="#" class="navbar-social-list"></a>
+                         <ion-icon name="logo-facebook"></ion-icon>>
+                </li>
+                <li>
+                    <a href="#" class="navbar-social-list"></a>
+                         <ion-icon name="logo-pinterest"></ion-icon>>
+                </li>
+                <li>
+                    <a href="#" class="navbar-social-list"></a>
+                         <ion-icon name="logo-instagram"></ion-icon>>
+                </li>
+                <li>
+                    <a href="#" class="navbar-social-list"></a>
+                         <ion-icon name="logo-youtube"></ion-icon>>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+
+
+
+
+        </div>
     </header>
+
+
+        <!-- 類別選擇 -->
         <div id="tags">
             <div class="tag">Avtion</div>
             <div class="tag">Adventure</div>
@@ -120,8 +211,11 @@
         <p>發布日期</p>
         <p>評分</p> -->
        
+
+
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-        <script src="main.js"></script>
+        <!-- <script src="main.js"></script> -->
         
 </body>
 </html>
