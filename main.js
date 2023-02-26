@@ -206,7 +206,6 @@ function showMovies(data){
         movieEL.classList.add('movie');
         movieEL.innerHTML=`
 
-        <button id="myFavorite" >加到我的片單</button>
         <img src="${IMG_URL+poster_path}" alt="${title}">
             <div class="movieInfo">
                 <h3>${title}</h3>

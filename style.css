@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+
+
+
+
 *{
 
     box-sizing: border-box;
@@ -61,69 +65,12 @@ body{
     background-color: var(--secondary-color);
 } */
 
-.heard .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--secondary-color);
-}
-
-
-.header-actions{
-    display: none;
-}
-
-.navbar{
-    position: flex;
-    top: 0;
-    right: -300px;
-    background-color: #cf1919;
-    width: 100%;
-    max-width: 300px;
-    height: 100%;
-    box-shadow:  -1px 0 3px hsl(0, 0%, 0%,0.2);
-    transition: 0.15s ease-in;
-    visibility: hidden;
-    z-index: 3;
-}
-
-
-.navbar .active{
-    right: 0;
-    visibility: visible;
-    transition: 0.25s ease-out;
-}
-
-
-.navbar-list{
-    border-top: 1px solid hsl(0, 0%, 100%,0.1);
-    margin-bottom: 30%;
-    color: #22254b; 
-}
-
-.navbar-link{
-    color: white;
-    font-style: 8px;
-    font-weight: 500;
-    padding: 10px 25px;
-    border-bottom: 1px solid hsla(0, 0% 100% 0.1);
-    transition: var(--transition-1);
-}
 
 
 
 
 
-.logo{
-   color: #fff;
-}
-.navidation{
-    list-style: none;
-    font-size: 100%;
-    color: #fff;
-    display: flex;
-    /* border: 1px solid black; */
-}
+
 
 a {
     font-size: 120%;

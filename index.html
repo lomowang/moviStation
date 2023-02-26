@@ -6,13 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmalane</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
+
+
 <body>
     <header class="header" data-header>
         <div class="container">
             <div class="overlay" data-overlay></div>
-                 <a href="./index.html" class="logo">
-                      <img src="./assets/images/logo.svg" alt="Filmlane logo">
+            <a href="./index.html" class="logo">
+                <img src="/images/logo.svg" alt="Filmlane logo">
             </a>
             
         <div class="header-actions">
@@ -27,8 +35,7 @@
         <!-- 選取語言 -->
             <div class="lang-wrapper">
                 <label for="language">
-                    <ion-icon name="globe-outline"></ion-icon>
-                  </label>
+                </label>
 
                 <select name="language" id="language">
                     <option value="en">EN</option>
@@ -41,72 +48,75 @@
                     <input type="text" placeholder="search" id="search" class="search">
                 </form>
             </div>
-            <button class="btn btn-primar">Sing in</button>
-
-        </div>
-
+             <button class="btn btn-primary">Sign in</button>
+         </div>
 
 
-        <!-- 底下 -->
-        <nav class="navbar active" data-navbar>
-            <div class="navbat-top">
-                <a href="#" class="logo">
-                    <img src="" alt="logo" srcset="">
-                </a>
+            <!-- 底下 -->
+            <nav class="navbar active" data-navbar>
+                <div class="navbat-top">
+                    <a href="#" class="logo">
+                        <img src="/images/logo.svg" alt="logo">
+                    </a>
 
 
-            <button class="menu-close-btn" data-menu-close-btn>
-                <!-- 打叉有問題 -->
-                 <i class="ion-close"></i>
-                </button>
-            </div>
+                    <button class="menu-close-btn" data-menu-close-btn>
+                    </button>
+                </div>
 
 
-            <ul class="navbar-list">
-                <li><a href="#" class="navbar-link">首頁</a></li>
-            </ul>
-            <ul class="navbar-list">
-                <li><a href="#" class="navbar-link">熱門電影</a></li>
-            </ul>
-            <ul class="navbar-list">
-                <li><a href="#" class="navbar-link">我的片單</a></li>
-            </ul>
-            <ul class="navbar-list">
-                <li><a href="#" class="navbar-link">即將上映</a></li>
-            </ul>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="#" class="navbar-link">首頁</a>
+                    </li>
+              
+                    <li>
+                        <a href="#" class="navbar-link">熱門電影</a>
+                    </li>
+                    <li>
+                        <a href="#" class="navbar-link">我的片單</a>
+                    </li>
+                    <li>
+                        <a href="#" class="navbar-link">即將上映</a>
+                    </li>
+                </ul>
 
-            <!-- 社群連結 -->
-            <ul class="navbar-social-list">
+                <!-- 社群連結 -->
+                <ul class="navbar-social-list">
 
-                <li>
-                    <a href="#" class="navbar-social-list"></a>
-                         <ion-icon name="logo-twitter"></ion-icon>>
-                </li>
-                <li>
-                    <a href="#" class="navbar-social-list"></a>
-                         <ion-icon name="logo-facebook"></ion-icon>>
-                </li>
-                <li>
-                    <a href="#" class="navbar-social-list"></a>
-                         <ion-icon name="logo-pinterest"></ion-icon>>
-                </li>
-                <li>
-                    <a href="#" class="navbar-social-list"></a>
-                         <ion-icon name="logo-instagram"></ion-icon>>
-                </li>
-                <li>
-                    <a href="#" class="navbar-social-list"></a>
-                         <ion-icon name="logo-youtube"></ion-icon>>
-                </li>
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <i class="icon-twitter"></i>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <i class="ion-printer">
+                            </i>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="#" class="navbar-social-link">
+                            <i class="icon-instagram"></i>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+            
+                </ul>
 
-            </ul>
-
-        </nav>
-
-
-
-
-
+            </nav>
 
         </div>
     </header>
@@ -211,11 +221,12 @@
         <p>發布日期</p>
         <p>評分</p> -->
        
-
-
+        <!-- <script src="main.js"></script> -->
+        <!-- icon link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-        <!-- <script src="main.js"></script> -->
+       
         
 </body>
 </html>
