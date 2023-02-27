@@ -4,10 +4,8 @@
 const API_KEY = 'api_key=5d7ac24e63419994fda11db9f90c8f2b';
 const BASE_URL ='https://api.themoviedb.org/3';
 const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY;
-
 const IMG_URL= 'https://image.tmdb.org/t/p/w500';
 const searchURL = BASE_URL+'/search/movie?'+API_KEY;
-
 const genres = [
   {
     id: 28,
@@ -100,6 +98,27 @@ const tagsEL = document.getElementById('tags');
 
 
 
+
+// header
+
+const navOpenBtn = document.querySelector("[data-memu-open-btn]");
+const navCloseBtn = document.querySelector("[data-memu-close-btn]");
+const navbar = document.querySelector("[data-navbar]");
+const overtop = document.querySelector("[data-overtop]");
+
+
+
+// const navElemArr = [navOpenBtn,navCloseBtn,overtop];
+// for(let i= 0; i<navElemArr.length; i++){
+//   navElemArr[i].addEventListener("click",function(){
+//     navbar.classList.toggle("active");
+//     overtop.classList.toggle("active");
+//     document.body.classList.toggle("active");
+//   });
+// }
+
+
+
 var selectedGenre = []
 setGenre();
 function setGenre(){
@@ -162,24 +181,24 @@ function highlightSelection(){
 
 
 
-function clearBtn(){
-  let clearBtn = document.getElementById('clear');
-  if(clearBtn){
-    clearBtn.classList.add('highlight')
-  }else{
-    let clear = document.createElement('div');
-    clear.classList.add('tag','highlight');
-    clear.id='claer';
-    clear.innerText = 'clear x';
-    clear.addEventListener('click',() =>{
+// function clearBtn(){
+//   let clearBtn = document.getElementById('clear');
+//   if(clearBtn){
+//     clearBtn.classList.add('highlight')
+//   }else{
+//     let clear = document.createElement('div');
+//     clear.classList.add('tag','highlight');
+//     clear.id='claer';
+//     clear.innerText = 'clear x';
+//     clear.addEventListener('click',() =>{
 
-      selectedGenre = [];
-      setGenre();
-      getMovies(API_URL);
-    })
-    tagsEL.append(clear);
-  }
-}
+//       selectedGenre = [];
+//       setGenre();
+//       getMovies(API_URL);
+//     })
+//     tagsEL.append(clear);
+//   }
+// }
 
 
 
@@ -233,128 +252,128 @@ function showMovies(data){
         
     }
     
+
+
   
 
 
-
-
     
-    const overlayContent = document.getElementById('overlay-content');
+    // const overlayContent = document.getElementById('overlay-content');
     /* Open when someone clicks on the span element */
-    function openNav(movie) {
-      let id = movie.id;
-        fetch(BASE_URL + '/movie/'+id+'/videos?'+API_KEY).then(res => res.json())
-        .then(videoData =>{
-            // 2.抓到ID後幫我印出值的資料
-            console.log(videoData);
-            if(videoData){
-                document.getElementById("myNav").style.width = "100%";
-            if(videoData.results.length > 0){
-                // 設定一個空字串 裝movievideo
-                var embed = [];
-                var dots = [];
-                videoData.results.forEach((video, idx)=>{
-                    // 設定要抓取的值
-                    let {name, key, site} = video
-                    if(site == 'YouTube'){
-                      embed.push(`
-                       <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" class="embed hide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    // function openNav(movie) {
+    //   let id = movie.id;
+    //     fetch(BASE_URL + '/movie/'+id+'/videos?'+API_KEY).then(res => res.json())
+    //     .then(videoData =>{
+    //         // 2.抓到ID後幫我印出值的資料
+            // console.log(videoData);
+            // if(videoData){
+            //     document.getElementById("myNav").style.width = "100%";
+            // if(videoData.results.length > 0){
+            //     // 設定一個空字串 裝movievideo
+                // var embed = [];
+                // var dots = [];
+                // videoData.results.forEach((video, idx)=>{
+                //     // 設定要抓取的值
+                    // let {name, key, site} = video
+                    // if(site == 'YouTube'){
+                    //   embed.push(`
+                    //    <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" class="embed hide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   
-                      `)
+                    //   `)
 
 
-                      dots.push(`
-                      <span class="dot">${idx + 1}</span>
-                      `)
-                    }
+      //                 dots.push(`
+      //                 <span class="dot">${idx + 1}</span>
+      //                 `)
+      //               }
     
-                })
+      //           })
 
-                var content =`
-                <h1 class="no-results">${movie.original_title}</h1>
-                <br/>
+      //           var content =`
+      //           <h1 class="no-results">${movie.original_title}</h1>
+      //           <br/>
 
-                ${embed.join('')}
-                <br/>
+      //           ${embed.join('')}
+      //           <br/>
 
-                <div class="dots">${dots.join('')}</div>
-                `
-                overlayContent.innerHTML = content;
-                activeSlide=0;
-                showVideos();
-            }else{
-                overlayContent.innerHTML = `<h1 class="no-results">No Results Found</h1>`
+      //           <div class="dots">${dots.join('')}</div>
+      //           `
+      //           overlayContent.innerHTML = content;
+      //           activeSlide=0;
+      //           showVideos();
+      //       }else{
+      //           overlayContent.innerHTML = `<h1 class="no-results">No Results Found</h1>`
     
-            }
-          }
-        })
-      }
+      //       }
+      //     }
+      //   })
+      // }
 
       /* Close when someone clicks on the "x" symbol inside the overlay */
-      function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-      }
+      // function closeNav() {
+      //   document.getElementById("myNav").style.width = "0%";
+      // }
 
-      // 展示一個影片
-      var activeSlide = 0;
-      var totalVideos = 0;
+      // // 展示一個影片
+      // var activeSlide = 0;
+      // var totalVideos = 0;
 
-      function showVideos(){
-        let embedClasses = document.querySelectorAll('.embed');
-        let dots = document.querySelectorAll('.dot');
+      // function showVideos(){
+      //   let embedClasses = document.querySelectorAll('.embed');
+      //   let dots = document.querySelectorAll('.dot');
 
 
-        totalVideos = embedClasses.length;
-        embedClasses.forEach((embedTag, idx) => {
-          if(activeSlide == idx){
-            embedTag.classList.add('show')
-            embedTag.classList.remove('hide')
+      //   totalVideos = embedClasses.length;
+      //   embedClasses.forEach((embedTag, idx) => {
+      //     if(activeSlide == idx){
+      //       embedTag.classList.add('show')
+      //       embedTag.classList.remove('hide')
           
-          }else{
-            embedTag.classList.add('hide');
-            embedTag.classList.remove('show')
+      //     }else{
+      //       embedTag.classList.add('hide');
+      //       embedTag.classList.remove('show')
             
-          }
+      //     }
 
-        })
+      //   })
 
 
-        dots.forEach((dot, indx) => {
-          if(activeSlide == indx){
-            dot.classList.add('active');
-          }else{
-            dot.classList.remove('active')
-          }
-        })
-      }
-      const leftArrow = document.getElementById('left-arrow')
-      const rightArrow = document.getElementById('right-arrow')
+      //   dots.forEach((dot, indx) => {
+      //     if(activeSlide == indx){
+      //       dot.classList.add('active');
+      //     }else{
+      //       dot.classList.remove('active')
+      //     }
+      //   })
+      // }
+      // const leftArrow = document.getElementById('left-arrow')
+      // const rightArrow = document.getElementById('right-arrow')
       
-      leftArrow.addEventListener('click', () => {
-        if(activeSlide > 0){
-          activeSlide--;
-        }else{
-          activeSlide = totalVideos -1;
-        }
+      // leftArrow.addEventListener('click', () => {
+      //   if(activeSlide > 0){
+      //     activeSlide--;
+      //   }else{
+      //     activeSlide = totalVideos -1;
+      //   }
       
-        showVideos()
-      })
+      //   showVideos()
+      // })
 
 
       
-      rightArrow.addEventListener('click',() => {
-        if(activeSlide < (totalVideos -1)){
-          activeSlide++;
-        }else{
-          activeSlide = 0;
-        }
-        showVideos()
-      })
+      // rightArrow.addEventListener('click',() => {
+      //   if(activeSlide < (totalVideos -1)){
+      //     activeSlide++;
+      //   }else{
+      //     activeSlide = 0;
+      //   }
+      //   showVideos()
+      // })
 
 
 
 
-    //  評分投票
+  //  評分投票
      function getColor(vote){
         if(vote>=8){
             return'green'

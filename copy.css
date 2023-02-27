@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+
+
+
+*{
+
+    box-sizing: border-box;
+    /* border: 1px black solid; */
+    /* color: #fff; */
+    list-style: none;
+    
+}
+
+
+
+:root{
+    --primary-color:#22254b;
+    --secondary-color:#373b69;
+    --rich-black-fogra-29: hsl(225, 25%, 9%);
+    --rich-black-fogra-39: hsl(170, 21%, 5%);
+    --raisin-black: hsl(228, 13%, 15%);
+    --eerie-black: hsl(207, 19%, 11%);
+    --light-gray: hsl(0, 3%, 80%);
+    --gunmetal-1: hsl(229, 15%, 21%);
+    --gunmetal-2: hsl(216, 22%, 18%);
+    --gainsboro: hsl(0, 7%, 88%);
+    --citrine: hsl(57, 97%, 45%);
+    --xiketic: hsl(253, 21%, 13%);
+    --gray-x: hsl(0, 0%, 74%);
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --jet: hsl(0, 0%, 20%);
+
+    /**
+   * transition 控制畫面載入後 字體速度
+   */
+
+   --transition-1: 0.15s ease;
+   --transition-2: 0.25s ease-in;
+
+   
+}
+
+
+body{
+    font-family:'Roboto', sans-serif;
+    margin: 0;
+    background-color: var(--primary-color);
+}
+
+
+
+
+/* reusedstyle */
+
+.container{
+    padding-inline: 15px;
+}
+
+
+/* headr */
+
+.header{
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 25px;
+    transition: var(--transition-2);
+    z-index: 4;
+    /* padding: 1rem; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    background-color: var(--secondary-color);
+    
+}
+
+
+.header.active{
+ background: var(--eerie-black);   
+ padding-block: 20px;
+}
+
+
+
+
+/* 將header拆成三等份 */
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header-actions{
+    display: none;
+}
+
+
+.menu-open-btn{
+    color: var(--white);
+    font-size: 40px;
+    background-color: #373b69;
+    border: 0px;
+}
+
+
+
+.navbar{
+    position: fixed;
+    top: 0;
+    right: 0px;
+    background: var(--eerie-black);
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    box-shadow: -1px - 3px hsl(0,0%,0%,0.2);
+    transition: 0.15s ease-in;
+    z-index: 3;
+}
+
+.navbar.active{
+    
+    right: 0;
+    visibility: visible;
+    transition: 0.25s ease-out;
+}
+.navbar-top{
+    padding: 30px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-close-btn{
+    color: var(--white);
+    background: none;
+    border: 0;
+    font-size: 40px;
+}
+
+.menu-close-btn ion-icon { --ionicon-stroke-width: 80px; }
+
+.navbar-list{
+    border-top: 1px solid hsla(0, 0% 100% ,0.1);
+    margin-bottom: 40px;
+}
+
+.navbar-link{
+    color: var(--white);
+    font-size: 50px;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-bottom: 1px solid hsla(0, 10%, 100% ,0.5);
+    transition: var(--transition-1);
+
+}
+
+/* is CSS多選擇器 */
+.navbar-link:is(:hover, :focus) {
+    color: var(--citrine);
+}
+
+
+.navbar-social-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 相鄰行距使用 */
+    gap: 20px;
+}
+
+.navbar-social-link{
+    font-size: 40px;
+    color: var(--white);
+    transition: var(--transition-1);
+
+}
+
+
+.navbar-social-link:is(:hover,:focus){
+    color: var(--citrine);
+}
+
+.overlay{
+    display: none;
+}
+
+.overlay{
+    position: fixed;
+    inset: 0;
+    background: hsla(204, 18%, 11%, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    /* z-index: 1; */
+    transition: var(--transition-2);
+}
+
+.overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+
+
+
+
+
+a {
+    font-size: 120%;
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+}
+
+a:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+
+.navidation-tab{
+    font-size: 18px;
+    list-style: none;
+    margin-top: 0;
+    letter-spacing: 0.5px;
+    margin-left: 20px;
+}
+
+
+.navidation-tab:hover{
+    color: gray;
+    cursor: pointer;
+    
+}
+
+
+.search{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #fff;
+    font-family: inherit;
+}
+
+
+/* 點擊搜尋欄位變色 */
+.search:focus{
+    outline: 0;
+    background-color: var(--primary-color);
+}
+
+.search::placeholder{
+    color: #fff;
+}
+
+
+
+
+
+
+
+main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+
+.movie{
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgb(0,0,0,0.1);
+    /* 讓卡片突現 */
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+.movie img{
+    width: 100%;
+}
+
+
+.movieInfo{
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movieInfo h3{
+    margin-top: 0;
+}
+
+.movieInfo p{
+    border: 1px solid black;
+}
+
+
+.movieInfo span{
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie .date{
+    color: #fff;
+    padding: 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* 評分顏色 */
+
+
+.movieInfo span.green{
+    color: green;
+}
+
+
+.movieInfo span.orange{
+    color: orange;
+}
+
+
+.movieInfo span.red{
+    color: red;
+}
+
+
+
+/* 內文介紹隱藏 */
+.overView{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/* 內文介紹秀出來 */
+
+.movie:hover .overView{
+    transform: translateY(0);
+    
+}
+
+
+/* 我的最愛 */
+
+  
+ 
+/* 電影標籤 */
+
+#tags{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.tag{
+    color: white;
+    padding: 10px 20px;
+    background-color: orange;
+    border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.tag.highlight{
+    background-color: red;
+}
+
+.no-results{
+    color: white;
+}
+
+
+
+
+
+.knowMore{
+    background-color: orange;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 50px;
+    padding: 10px 15px;
+    margin-top: 5px;
+
+}
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 20%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+
+
+  /* 隱藏影片 */
+  .embed.hide{
+    display: none;
+  }
+
+
+  /* 秀出影片 */
+  .embed.show{
+    display: inline-block;
+  }
+
+
+  .arrow{
+    position: absolute;
+
+  }
+
+
+
+  .arrow.left-arrow{
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+
+  }
+
+
+  .arrow.right-arrow{
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%
+);
+
+  }
+
+
+
+
+  .dots{
+    margin-top: 30px;
+
+  }
+
+.dots .dot{
+    padding: 10px 10px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-color);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+
+
+
+.dots .dot.active{
+    border-color: orange;
+}

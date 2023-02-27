@@ -18,107 +18,75 @@
 <body>
     <header class="header" data-header>
         <div class="container">
-            <div class="overlay" data-overlay></div>
-            <a href="./index.html" class="logo">
-                <img src="/images/logo.svg" alt="Filmlane logo">
-            </a>
+                <nav class="navbar" data-navbar>
+                    <div class="navbar-top">
+                        <a href="#" class="logo">
+                            <img src="/images/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                </nav>
             
-        <div class="header-actions">
-            <ul class="navidation">
-                <li class="navidation-tab"><a href="index.html">首頁</a></li>
-                <li class="navidation-tab"><a href="Popularity.html">熱門電影</a></li>
-                <li class="navidation-tab"><a href="">我的片單</a></li>
-                <li class="navidation-tab"><a href="coming.html">即將上映</a></li>
-            </ul>
+
+                <div class="header-list">
+                    <ul class="navidation">
+                        <li class="navidation-tab"><a href="index.html">首頁</a></li>
+                        <li class="navidation-tab"><a href="Popularity.html">熱門電影</a></li>
+                        <li class="navidation-tab"><a href="">我的片單</a></li>
+                        <li class="navidation-tab"><a href="coming.html">即將上映</a></li>
+                    </ul>
 
 
-        <!-- 選取語言 -->
-            <div class="lang-wrapper">
-                <label for="language">
-                </label>
+                   
 
-                <select name="language" id="language">
-                    <option value="en">EN</option>
-                    <option value="au">AU</option>
-                    <option value="ar">AR</option>
-                    <option value="tu">TU</option>
-                </select>
-                <!-- 搜尋列 -->
-                <form id="form">
-                    <input type="text" placeholder="search" id="search" class="search">
-                </form>
-            </div>
-             <button class="btn btn-primary">Sign in</button>
-         </div>
-
-
-            <!-- 底下 -->
-            <nav class="navbar active" data-navbar>
-                <div class="navbat-top">
-                    <a href="#" class="logo">
-                        <img src="/images/logo.svg" alt="logo">
-                    </a>
-
-
-                    <button class="menu-close-btn" data-menu-close-btn>
-                    </button>
                 </div>
 
-
-                <ul class="navbar-list">
-                    <li>
-                        <a href="#" class="navbar-link">首頁</a>
-                    </li>
-              
-                    <li>
-                        <a href="#" class="navbar-link">熱門電影</a>
-                    </li>
-                    <li>
-                        <a href="#" class="navbar-link">我的片單</a>
-                    </li>
-                    <li>
-                        <a href="#" class="navbar-link">即將上映</a>
-                    </li>
-                </ul>
-
-                <!-- 社群連結 -->
-                <ul class="navbar-social-list">
-
-                    <li>
-                        <a href="#" class="navbar-social-link">
-                            <i class="icon-facebook"></i>
-                        </a>
-                    </li>
-            
-                    <li>
-                        <a href="#" class="navbar-social-link">
-                            <i class="icon-twitter"></i>
-                        </a>
-                    </li>
-            
-                    <li>
-                        <a href="#" class="navbar-social-link">
-                            <i class="ion-printer">
-                            </i>
-                        </a>
-                    </li>
-            
-                    <li>
-                        <a href="#" class="navbar-social-link">
-                            <i class="icon-instagram"></i>
-                        </a>
-                    </li>
-            
-                    <li>
-                        <i class="fa-brands fa-youtube"></i>
-                        </a>
-                    </li>
-            
-                </ul>
-
-            </nav>
-
+                <!-- 選取語言 -->
+                <div class="lang-wrapper">
+                    <label for="language">
+                        <ion-icon class="globe" name="globe-outline" ></ion-icon>
+                    </label>
+                    <select class="select" name="language" id="language">
+                        <option value="en">ENG</option>
+                        <option value="au">AU</option>
+                        <option value="ar">AR</option>
+                        <option value="tu">TU</option>
+                    </select>
+                    
+                    <!-- 搜尋列 -->
+                    <form id="form">
+                        <input type="text" placeholder="search" id="search" class="search">
+                    </form>
+                    
+                    <button class="signinBtn">Sign in</button>
+                </div>
+                
         </div>
+
+        
+        <div class="menu">
+            <div class="movelist">
+                <h2>MovieStaion</h2>
+                <h3>Unlimited Movie, TVs Shows, & More.</h3> 
+            </div>
+            <div class="detail">
+                    <p class="pg">PG16</p>
+                    <p class="hd">HD</p>
+
+                    <p>Romance</p>
+                    <p class="Drama">Drama</p>
+
+                    <p>2023</p>
+                    <p>128 min</p>
+            </div>
+            <div>
+                <label for="playVideo">
+                    <ion-icon name="caret-forward-outline"></ion-icon>
+                </label>
+                <h1>播放影片</h1>
+
+            </div>
+        </div>
+
     </header>
 
 
@@ -132,25 +100,25 @@
         </div>
 
 
-        <!-- 秀出電影影片 -->
+        <!-- 秀出電影影片
         <div id="myNav" class="overlay">
 
-            <!-- Button to close the overlay navigation -->
+            Button to close the overlay navigation
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         
-            <!-- Overlay content -->
+            Overlay content
             <div class="overlay-content" id="overlay-content"></div> 
 
             
-            <!-- 左箭頭 -->
+            左箭頭
             <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a>
             
-            <!-- 右箭頭 -->
+            右箭頭
             <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
 
             
 
-        </div>
+        </div> -->
 
     <main id="main">
         <div class="movie">
@@ -221,12 +189,80 @@
         <p>發布日期</p>
         <p>評分</p> -->
        
-        <!-- <script src="main.js"></script> -->
+        <script src="main.js"></script>
         <!-- icon link -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
        
         
 </body>
+
+
+<footer class="footer">
+   
+        <div class="footer-top">
+            <a href="#" class="logo">
+                <img src="/images/logo.svg" alt="logo">
+            </a>
+            
+
+            <ul class="footer-list">
+                <li>
+                    <a href="#" class="footer-link">首頁</a>
+                </li>
+            
+                <li>
+                    <a href="#" class="footer-link">熱門電影</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">我的片單</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">即將上映</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- 社群連結 -->
+        <ul class="navbar-social-list">
+
+            <li>
+                <a href="#" class="navbar-social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+    
+            <li>
+                <a href="#" class="navbar-social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+    
+            <li>
+                <a href="#" class="navbar-social-link">
+                    <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+            </li>
+    
+            <li>
+                <a href="#" class="navbar-social-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+    
+            <li>
+                
+                <a href="#" class="navbar-social-link">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </li>
+    
+        </ul>
+
+
+</footer>
 </html>
