@@ -18,27 +18,22 @@
 <body>
     <header class="header" data-header>
         <div class="container">
-                <nav class="navbar" data-navbar>
-                    <div class="navbar-top">
-                        <a href="#" class="logo">
-                            <img src="/images/logo.svg" alt="logo">
-                        </a>
-                    </div>
-                </nav>
-            
+                <div class="navbar" >
+                    <a href="#" class="logo">
+                        <img src="/images/logo.svg" alt="logo">
+                    </a>
+                </div>
 
+                
                 <div class="header-list">
                     <ul class="navidation">
-                        <li class="navidation-tab"><a href="index.html">首頁</a></li>
-                        <li class="navidation-tab"><a href="Popularity.html">熱門電影</a></li>
-                        <li class="navidation-tab"><a href="">我的片單</a></li>
-                        <li class="navidation-tab"><a href="coming.html">即將上映</a></li>
+                        <li ><a href="index.html">首頁</a></li>
+                        <li ><a href="Popularity.html">熱門電影</a></li>
+                        <li ><a href="">我的片單</a></li>
+                        <li ><a href="coming.html">即將上映</a></li>
                     </ul>
-
-
-                   
-
                 </div>
+
 
                 <!-- 選取語言 -->
                 <div class="lang-wrapper">
@@ -59,12 +54,11 @@
                     
                     <button class="signinBtn">Sign in</button>
                 </div>
-                
         </div>
 
         
         <div class="menu">
-            <div class="movelist">
+            <div class="movielist">
                 <h2>MovieStaion</h2>
                 <h3>Unlimited Movie, TVs Shows, & More.</h3> 
             </div>
@@ -74,16 +68,21 @@
 
                     <p>Romance</p>
                     <p class="Drama">Drama</p>
-
+                    <label class="calendar" for="calendar">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                    </label>
                     <p>2023</p>
+                    <label class="clock" for="clock">
+                        <ion-icon name="time-outline"></ion-icon>
+                    </label>
                     <p>128 min</p>
             </div>
-            <div>
+            
+            <div class="playVideoBtn">
                 <label for="playVideo">
-                    <ion-icon name="caret-forward-outline"></ion-icon>
+                    <ion-icon class="playbtn" name="caret-forward-outline"></ion-icon>
                 </label>
                 <h1>播放影片</h1>
-
             </div>
         </div>
 
@@ -228,41 +227,40 @@
 
 
         <!-- 社群連結 -->
-        <ul class="navbar-social-list">
+        <ul class="social-list">
 
             <li>
-                <a href="#" class="navbar-social-link">
+                <a href="#" class="social-link">
                     <ion-icon name="logo-facebook"></ion-icon>
                 </a>
             </li>
     
             <li>
-                <a href="#" class="navbar-social-link">
+                <a href="#" class="social-link">
                     <ion-icon name="logo-twitter"></ion-icon>
                 </a>
             </li>
     
             <li>
-                <a href="#" class="navbar-social-link">
+                <a href="#" class="social-link">
                     <ion-icon name="logo-pinterest"></ion-icon>
                 </a>
             </li>
     
             <li>
-                <a href="#" class="navbar-social-link">
+                <a href="#" class="social-link">
                     <ion-icon name="logo-instagram"></ion-icon>
                 </a>
             </li>
     
             <li>
                 
-                <a href="#" class="navbar-social-link">
+                <a href="#" class="social-link">
                     <ion-icon name="logo-youtube"></ion-icon>
                 </a>
             </li>
-    
         </ul>
 
-
+        <h3 class="Copyright">Copyright © 2023 lomo All rights reserved.</h3>
 </footer>
 </html>

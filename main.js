@@ -181,24 +181,24 @@ function highlightSelection(){
 
 
 
-// function clearBtn(){
-//   let clearBtn = document.getElementById('clear');
-//   if(clearBtn){
-//     clearBtn.classList.add('highlight')
-//   }else{
-//     let clear = document.createElement('div');
-//     clear.classList.add('tag','highlight');
-//     clear.id='claer';
-//     clear.innerText = 'clear x';
-//     clear.addEventListener('click',() =>{
+function clearBtn(){
+  let clearBtn = document.getElementById('clear');
+  if(clearBtn){
+    clearBtn.classList.add('highlight')
+  }else{
+    let clear = document.createElement('div');
+    clear.classList.add('tag','highlight');
+    clear.id='claer';
+    clear.innerText = 'clear x';
+    clear.addEventListener('click',() =>{
 
-//       selectedGenre = [];
-//       setGenre();
-//       getMovies(API_URL);
-//     })
-//     tagsEL.append(clear);
-//   }
-// }
+      selectedGenre = [];
+      setGenre();
+      getMovies(API_URL);
+    })
+    tagsEL.append(clear);
+  }
+}
 
 
 
@@ -252,9 +252,9 @@ function showMovies(data){
         
     }
     
-
-
   
+
+
 
 
     
@@ -373,7 +373,7 @@ function showMovies(data){
 
 
 
-  //  評分投票
+    //  評分投票
      function getColor(vote){
         if(vote>=8){
             return'green'
