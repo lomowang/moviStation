@@ -68,11 +68,6 @@ body{
     width: 100%;
     padding-block: 25px;
     transition: var(--transition-2);
-    /* z-index: 0; */
-    /* padding: 1rem; */
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* background-color: var(--eerie-black); */
     background-image:url(/images/R0001438.JPG);
     background-repeat: no-repeat;
     height: 100vh;
@@ -88,7 +83,6 @@ body{
 
 
 .container{
-    
     position: fixed;
     display: flex;
     justify-content: space-around;
@@ -100,6 +94,7 @@ body{
     background-color: var(--eerie-black);
     /* border: 1px solid red; */
 }
+
 
 
 /* 頁面分類 */
@@ -258,14 +253,7 @@ select>option{
 }
 
 
-/* 
-.navbar-top{
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
- */
+
 
 .navbar-list{
     width: 1000px;
@@ -408,6 +396,8 @@ a:hover{
 
 
 
+
+
 main .trendingMovie{
     position: relative;
     display:flex;
@@ -437,13 +427,13 @@ main .trendingMovie::-webkit-scrollbar{
     align-items: center;
     justify-content: center;
     min-width: 300px;
-    height: 100%;
+    height: 600px;
     margin: 0.5rem;
     /* border-radius: 5px; */
     box-shadow: 0.2px 4px 5px rgb(0,0,0,0.1);
     /* 讓卡片突現 */
-    /* background-color: var(--secondary-color); */
-    background: transparent;
+    background-color: var(--eerie-black);
+    /* background: transparent; */
     position: relative;
     /* overflow: hidden; */
     border-radius: 20px;
@@ -452,7 +442,7 @@ main .trendingMovie::-webkit-scrollbar{
 
 .movie img{
     width: 100%;
-    height: 100%;
+    height: 400px;
     border-radius: 8px;
     position: relative;
 }
@@ -521,7 +511,7 @@ main .trendingMovie::-webkit-scrollbar{
 
 
 /* 內文介紹隱藏 */
-.overView{
+/* .overView{
     position: absolute;
     left: 0;
     right: 0;
@@ -533,7 +523,7 @@ main .trendingMovie::-webkit-scrollbar{
     max-height: 100%;
     transform: translateY(101%);
     transition: transform 0.5s ease-in-out;
-}
+} */
 
 
 /* 內文介紹秀出來 */
@@ -583,12 +573,6 @@ main .trendingMovie::-webkit-scrollbar{
 
 
 
-
-
-
-
-
-
 /* TV */
 
 
@@ -603,7 +587,7 @@ main{
     /* height: 100%; */
     padding: 0px 20px;
     bottom: 20px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     overflow-x: auto;
 
     /* justify-content: center; */
@@ -615,19 +599,19 @@ main::-webkit-scrollbar{
 
 
 
-.tv{
+.tv {
     position: absolute;
     display: block;
     align-items: center;
     justify-content: center;
     min-width: 300px;
-    height: 100%;
+    height: 600px;
     margin: 0.5rem;
     /* border-radius: 5px; */
     box-shadow: 0.2px 4px 5px rgb(0,0,0,0.1);
     /* 讓卡片突現 */
-    /* background-color: var(--secondary-color); */
-    background: transparent;
+    background-color: var(--eerie-black);
+    /* background: transparent; */
     position: relative;
     /* overflow: hidden; */
     border-radius: 20px;
@@ -636,7 +620,7 @@ main::-webkit-scrollbar{
 
 .tv img{
     width: 100%;
-    height: 100%;
+    height: 400px;
     border-radius: 8px;
     position: relative;
 }
@@ -644,11 +628,19 @@ main::-webkit-scrollbar{
 
 .tvshowInfo{
     color: #eee;
-    /* display: flex; */
     align-items: center;
-    /* justify-content: space-between; */
-    padding: 0.5rem 1rem 1rem;
+    padding: 0.5rem 1rem 0;
     letter-spacing: 0.5px;
+    /* border: 1px solid white; */
+    font-size: 20px;
+
+}
+
+.tvshowInfo h3{
+    margin-top: 0;
+    padding-top: 20px;
+    font-size: 20px;
+
 }
 
 .tv .green{
@@ -657,11 +649,7 @@ main::-webkit-scrollbar{
 
 }
 
-.tvshowInfo h3{
-    margin-top: 0;
-    font-size: 20px;
 
-}
 
 .tv p{
     /* border: 1px solid black; */
@@ -799,3 +787,62 @@ main::-webkit-scrollbar{
     padding: 20px;
 
 }
+
+/* 往左邊 */
+main .back-outline{
+font-size: 50px;
+color: antiquewhite;
+ position: absolute;
+ left: 12px;
+ top: 50px;
+ background: rgb(255,255,255,.3);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 999999;
+ border-radius: 50%;
+ cursor: pointer;
+ transition: .3s linear;
+
+
+ 
+}
+
+
+/* 往右邊 */
+main .forward-outline{
+    font-size: 50px;
+     position: absolute;
+     right: 3%;
+     top: 50%;
+     background: rgb(255,255,255,.3);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 999999;
+     border-radius: 50%;
+     cursor: pointer;
+     transition: .3s linear;
+    
+     
+    }
+    
+
+
+main  .back-outline{
+    font-size: 50px;
+     position: absolute;
+     left: 12px;
+     bottom: -50%;
+     background: rgb(255,255,255,.3);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 999999;
+     border-radius: 50%;
+     cursor: pointer;
+     transition: .3s linear;
+     /* opacity: 0; */
+    
+     
+    }

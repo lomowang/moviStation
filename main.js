@@ -109,12 +109,6 @@ console.log(trendingTvshow)
 
 
 // header
-
-
-
-
-
-
 var selectedGenre = []
 setGenre();
 function setGenre(){
@@ -176,24 +170,7 @@ function highlightSelection(){
 
 
 
-function clearBtn(){
-  let clearBtn = document.getElementById('clear');
-  if(clearBtn){
-    clearBtn.classList.add('highlight')
-  }else{
-    let clear = document.createElement('div');
-    clear.classList.add('tag','highlight');
-    clear.id='claer';
-    clear.innerText = 'clear x';
-    clear.addEventListener('click',() =>{
 
-      selectedGenre = [];
-      setGenre();
-      getMovies(API_URL);
-    })
-    tagsEL.append(clear);
-  }
-}
 
 
 // 這是秀出電影的
@@ -222,6 +199,7 @@ function showMovies(data){
         const movieEL = document.createElement('div');
         movieEL.classList.add('movie');
         movieEL.innerHTML=`
+        
         <img src="${IMG_URL+poster_path}" alt="${title}">
             <div class="movieInfo">
                 <h3>${title}</h3>
@@ -313,7 +291,19 @@ data.forEach(tv =>{
 
 
 
+const rightBtn =document.getElementsByClassName('back-outline')[0];
 
+const lefttBtn = document. getElementsByClassName('forward-outline')[0];
+
+const trendingMovie = document.getElementsByClassName('trendingMovie')[0];
+
+
+rightBtn.addEventListener('click', ()=> {
+  trendingMovie.scrollLeft -= 140;
+})
+lefttBtn.addEventListener('click', ()=> {
+  trendingMovie.scrollLeft += 140;
+})
 
 
 // function showMovies(data){

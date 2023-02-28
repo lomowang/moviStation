@@ -16,8 +16,8 @@
 
 
 <body>
-    <header class="header" data-header>
-        <div class="container">
+    <header class="header" id="header">
+        <div class="container" >
                 <div class="navbar" >
                     <a href="#" class="logo">
                         <img src="/images/logo.svg" alt="logo">
@@ -101,10 +101,7 @@
             <div class="tag">Comedy</div>
             <div class="tag">Animation</div>
         </div>
-        <section class="secNav">
-            <h1>Trending Movies</h1>
-            <p>Exploer All</p>
-        </section>
+
 
 
         <!-- 秀出電影影片
@@ -128,9 +125,16 @@
         </div> -->
 
     
-        <!-- 項目主題 -->
-
     <!-- 電影條 -->
+    <section class="secNav">
+        <h1>Trending Movies</h1>
+        <p>Exploer All</p>
+        <ion-icon class="back-outline" name="chevron-back-outline"></ion-icon>
+        <ion-icon class="forward-outline" name="chevron-forward-outline"></ion-icon>
+    </section>
+    
+   
+
     <main id="main">
         <div class="trendingMovie">
             
@@ -238,6 +242,14 @@
         <!-- 影集條 -->
     </main>
 
+
+
+    <!-- 電視條 -->
+    <section class="secNav">
+        <h1>Trending TV show</h1>
+        <p>Exploer All</p>
+    </section>
+
     <main id="trendingTvshow">
        
             <div class="tv">
@@ -286,10 +298,7 @@
 
 
     
-    <section class="secNav">
-        <h1>Trending TV show</h1>
-        <p>Exploer All</p>
-    </section>
+ 
 
     
 
@@ -300,6 +309,9 @@
         <p>簡介</p>
         <p>發布日期</p>
         <p>評分</p> -->
+
+
+
        
    
 </body>
@@ -369,6 +381,10 @@
         <h3 class="Copyright">Copyright © 2023 lomo All rights reserved.</h3>
 </footer>
 <script src="main.js"></script>
+
+
+
+
 <!-- icon link -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -377,7 +393,14 @@
 <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
 
+
+
+
+
+
+
 </html>
+
 
 
 
