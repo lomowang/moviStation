@@ -95,27 +95,18 @@ const main = document.getElementById('main');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 const tagsEL = document.getElementById('tags');
+const header = document.getElementById('header');
+
+
+const mainTV = document.getElementById('mainTV');
 
 
 
 
 // header
 
-const navOpenBtn = document.querySelector("[data-memu-open-btn]");
-const navCloseBtn = document.querySelector("[data-memu-close-btn]");
-const navbar = document.querySelector("[data-navbar]");
-const overtop = document.querySelector("[data-overtop]");
 
 
-
-// const navElemArr = [navOpenBtn,navCloseBtn,overtop];
-// for(let i= 0; i<navElemArr.length; i++){
-//   navElemArr[i].addEventListener("click",function(){
-//     navbar.classList.toggle("active");
-//     overtop.classList.toggle("active");
-//     document.body.classList.toggle("active");
-//   });
-// }
 
 
 
@@ -162,7 +153,6 @@ function setGenre(){
 }
 
 
-
 function highlightSelection(){
   // 移除標籤變色
   const tag = document.querySelectorAll('.tag');
@@ -201,7 +191,7 @@ function clearBtn(){
 }
 
 
-
+// main段落的
 getMovies(API_URL);
 
 function getMovies(url){
@@ -215,46 +205,34 @@ function getMovies(url){
     })
 }
 
-
+// main段落的
 function showMovies(data){
-    main.innerHTML = '';
+   main.innerHTML = '';
 
     data.forEach(movie =>{        
         const {title,poster_path,overview,release_date,vote_average,id} = movie;
         const movieEL = document.createElement('div');
         movieEL.classList.add('movie');
         movieEL.innerHTML=`
-
         <img src="${IMG_URL+poster_path}" alt="${title}">
             <div class="movieInfo">
                 <h3>${title}</h3>
-                <span class="green">${vote_average}</span>
             </div>
-            
+            <p class="green">${vote_average}</p>
             <div class="date">
-                <p>${release_date}</p>
+                <p >${release_date}</p>
             </div>
-
-            <div class="overView">
-                <h3>${overview}</h3>
-                <br/>
-                <button class="knowMore" id="${id}">Know More</button>
-            </div>
+        </div>
         `
-            main.appendChild(movieEL);
+        main.appendChild(movieEL);
 
-            //1.抓取影片的ID值
-            document.getElementById(id).addEventListener('click', () => {
-                    console.log(id)
-                    openNav(movie)
-                })
         })
         
     }
     
   
 
-
+ 
 
 
     
@@ -403,5 +381,36 @@ function showMovies(data){
 
 
 
+// function showMovies(data){
+//   card.innerHTML = '';
 
+//   data.forEach(movie =>{        
+//       const {title,poster_path,overview,release_date,vote_average,id} = movie;
+//       const movieEL = document.createElement('div');
+//       movieEL.classList.add('movie');
+//       movieEL.innerHTML=`
+//       <img src="${IMG_URL+poster_path}" alt="${title}">
+//           <div class="movieInfo">
+//               <h3>${title}</h3>
+//           </div>
+//           <p class="green">${vote_average}</p>
+//           <div class="date">
+//               <p >${release_date}</p>
+//           </div>
+//       </div>
+//       `
+
+
+
+//         card.appendChild(movieEL);
+
+//           1.抓取影片的ID值
+//           document.getElementById(id).addEventListener('click', () => {
+//                   console.log(id)
+//                   openNav(movie)
+//               })
+//       })
+      
+  // }
+  
   
