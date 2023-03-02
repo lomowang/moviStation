@@ -387,9 +387,11 @@ a:hover{
 .secNav h1{
     padding: 10px;
 }
-.secNav p{
+.secNav .ExploerAll, .tvall{
     color: coral;
     cursor: pointer;
+    font-size: 20px;
+    
 }
 
 
@@ -509,34 +511,6 @@ main .trendingMovie::-webkit-scrollbar{
 }
 
 
-
-/* 內文介紹隱藏 */
-/* .overView{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff;
-    font-size: 20px;
-    text-align: justify;
-    padding: 1rem;
-    max-height: 100%;
-    transform: translateY(101%);
-    transition: transform 0.5s ease-in-out;
-} */
-
-
-/* 內文介紹秀出來 */
-
-/* .movie:hover .overView{
-    transform: translateY(0);
-    
-} */
-
-
-/* 我的最愛 */
-
-  
  
 /* 電影標籤 */
 
@@ -789,7 +763,7 @@ main::-webkit-scrollbar{
 }
 
 /* 往左邊 */
-main .back-outline{
+main .backOutline{
 font-size: 50px;
 color: antiquewhite;
  position: absolute;
@@ -810,7 +784,7 @@ color: antiquewhite;
 
 
 /* 往右邊 */
-main .forward-outline{
+main .forwardOutline{
     font-size: 50px;
      position: absolute;
      right: 3%;
@@ -823,26 +797,8 @@ main .forward-outline{
      border-radius: 50%;
      cursor: pointer;
      transition: .3s linear;
+     color: aqua;
     
      
     }
     
-
-
-main  .back-outline{
-    font-size: 50px;
-     position: absolute;
-     left: 12px;
-     bottom: -50%;
-     background: rgb(255,255,255,.3);
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     z-index: 999999;
-     border-radius: 50%;
-     cursor: pointer;
-     transition: .3s linear;
-     /* opacity: 0; */
-    
-     
-    }

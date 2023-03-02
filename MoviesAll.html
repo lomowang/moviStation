@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmalane</title>
+    <link rel="stylesheet" href="/css/movie.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <header class="header" id="header">
+        <div class="container" >
+                <div class="navbar" >
+                    <a href="#" class="logo">
+                        <img src="/images/logo.svg" alt="logo">
+                    </a>
+                </div>
+
+                
+                <div class="header-list">
+                    <ul class="navidation">
+                        <li ><a href="index.html">首頁</a></li>
+                        <li ><a href="Popularity.html">熱門電影</a></li>
+                        <li ><a href="">熱門影集</a></li>
+                        <li ><a href="coming.html">即將上映</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- 選取語言 -->
+                <div class="lang-wrapper">
+                    <label for="language">
+                        <ion-icon class="globe" name="globe-outline" ></ion-icon>
+                    </label>
+                    <select class="select" name="language" id="language">
+                        <option value="en">ENG</option>
+                        <option value="au">AU</option>
+                        <option value="ar">AR</option>
+                        <option value="tu">TU</option>
+                    </select>
+                    
+                    <!-- 搜尋列 -->
+                    <form id="form">
+                        <input type="text" placeholder="search" id="search" class="search">
+                    </form>
+                    
+                    <!-- <button class="signinBtn">Sign in</button> -->
+                    <button class="signinBtn"><a href="/login.html">Sign in</a></button>
+                </div>
+        </div>
+
+  
+    </header>
+
+
+    <section class="secNav">
+        <h1>Trending Movies</h1>
+    </section>
+    
+   
+
+    <main id="main" class="main">
+        
+        <div class="trendingMovie">
+           
+            <div class="movie">
+                <img src="https://picsum.photos/id/684/600/400" alt="image">
+                <div class="movieInfo">
+                    <h3>movieTitle</h3>
+                </div>
+                <p class="green">評分</p>
+                <div class="date">
+                    <p >發布日期</p>
+                </div>
+            </div>
+
+            <div class="movie">
+                <img src="https://picsum.photos/id/684/600/400" alt="image">
+                <div class="movieInfo">
+                    <h3>movieTitle</h3>
+                </div>
+                <p class="green">評分</p>
+                <div class="date">
+                    <p >發布日期</p>
+                </div>
+            </div>
+
+            <div class="movie">
+                <img src="https://picsum.photos/id/684/600/400" alt="image">
+                <div class="movieInfo">
+                    <h3>movieTitle</h3>
+                </div>
+                <p class="green">評分</p>
+                <div class="date">
+                    <p >發布日期</p>
+                </div>
+            </div>
+
+            <div class="movie">
+                <img src="https://picsum.photos/id/684/600/400" alt="image">
+                <div class="movieInfo">
+                    <h3>movieTitle</h3>
+                </div>
+                <p class="green">評分</p>
+                <div class="date">
+                    <p >發布日期</p>
+                </div>
+            </div>
+
+            <div class="movie">
+                <img src="https://picsum.photos/id/684/600/400" alt="image">
+                <div class="movieInfo">
+                    <h3>movieTitle</h3>
+                </div>
+                <p class="green">評分</p>
+                <div class="date">
+                    <p >發布日期</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+ 
+
+    
+
+   
+</body>
+
+
+<footer class="footer">
+   
+        <div class="footer-top">
+            <a href="#" class="logo">
+                <img src="/images/logo.svg" alt="logo">
+            </a>
+            
+
+            <ul class="footer-list">
+                <li>
+                    <a href="#" class="footer-link">首頁</a>
+                </li>
+            
+                <li>
+                    <a href="#" class="footer-link">熱門電影</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">熱門影集</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">即將上映</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- 社群連結 -->
+        <ul class="social-list">
+
+            <li>
+                <a href="#" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+    
+            <li>
+                <a href="#" class="social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+    
+            <li>
+                <a href="#" class="social-link">
+                    <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+            </li>
+    
+            <li>
+                <a href="#" class="social-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+    
+            <li>
+                
+                <a href="#" class="social-link">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </li>
+        </ul>
+
+        <h3 class="Copyright">Copyright © 2023 lomo All rights reserved.</h3>
+</footer>
+<script src="/js/movieall.js"></script>
+
+
+
+
+<!-- icon link -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+
+
+
+
+
+
+
+</html>
+
+
+
